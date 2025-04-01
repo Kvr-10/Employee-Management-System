@@ -40,7 +40,7 @@ A full-stack web application for managing employee data efficiently with Spring 
 
 ## Screenshots
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard.jpg)
 ![Add Employee](screenshots/add-employee.png)
 ![Update Employee](screenshots/update-employee.png)
 
