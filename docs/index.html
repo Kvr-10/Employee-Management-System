@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="employee-management.png" type="image/ico">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9B5M1T8N72"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9B5M1T8N72');
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="employee-management.png" alt="Employee Management System Logo" class="header-img">
+            <h1>Employee Management System</h1>
+        </div>
+        <div class="marquee-container">
+            <p class="marquee">Full-Stack Employee Management System with Spring Boot and React</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About the System</h2>
+            <p>The Employee Management System is a full-stack web application designed to manage employee data efficiently. 
+                The backend is built with Spring Boot (Java) using JPA for database operations, while the frontend is developed with React (Vite) and Bootstrap for responsive UI design.
+                The system provides RESTful APIs for all CRUD operations and features a modern, user-friendly interface.</p>
+            <p>For more details and to view the source code, visit: <br> <a class="repo-link1" href="https://github.com/Kvr-10/Employee-Management-System" target="_blank"><b>GitHub repository</b></a></p>
+        </section>
+        
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li><strong>Employee Dashboard:</strong> View all employees with pagination and search functionality</li>
+                <li><strong>Add Employees:</strong> Create new employee records with validation</li>
+                <li><strong>Update Employees:</strong> Edit existing employee details</li>
+                <li><strong>Delete Employees:</strong> Remove employees from the system</li>
+                <li><strong>Responsive Design:</strong> Works on desktop and mobile devices</li>
+                <li><strong>REST API:</strong> Backend provides complete CRUD operations via REST endpoints</li>
+                <li><strong>Database Integration:</strong> MySQL database with JPA for data persistence</li>
+            </ul>
+        </section>
+        
+        <section id="technologies">
+            <h2>Technologies Used</h2>
+            <ul>
+                <li><strong>Backend:</strong> Spring Boot (Java), Spring Data JPA, MySQL</li>
+                <li><strong>Frontend:</strong> React (Vite), Bootstrap, Axios</li>
+                <li><strong>DevOps:</strong> Docker, Render (Backend), Railway (Database), Netlify (Frontend)</li>
+                <li><strong>Build Tools:</strong> Maven (Backend), npm (Frontend)</li>
+                <li><strong>Version Control:</strong> Git, GitHub</li>
+            </ul>
+        </section>
+
+        <section id="deployment">
+            <h2>Deployment Information</h2>
+            <ul>
+                <li><strong>Frontend:</strong> Hosted on Netlify with automatic CI/CD from GitHub</li>
+                <li><strong>Backend:</strong> Dockerized Spring Boot application deployed on Render</li>
+                <li><strong>Database:</strong> MySQL database hosted on Railway</li>
+                <li><strong>Note:</strong> The backend service on Render may take ~50 seconds to start if inactive (cold start)</li>
+            </ul>
+        </section>
+        
+        <section id="setup">
+            <h2>Setup and Installation</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Clone the Repository</h3>
+                    <p class="clone-command"><code>git clone https://github.com/Kvr-10/Employee-Management-System.git</code></p>
+                </div>
+                <div class="step">
+                    <h3>2. Backend Setup</h3>
+                    <p>Navigate to the backend directory:</p>
+                    <p class="directory-path"><code>cd Employee-Management-System/backend</code></p>
+                    <p>Configure your environment variables (either in your system or in a file)<code>.env</code></p>
+                    <p class="db-command"><code>DATASOURCE_URL=jdbc:mysql://your-database-url<br>
+                    DATASOURCE_USER=your-username<br>
+                    DATASOURCE_PASSWORD=your-password<br>
+                    FRONTEND_URL=your-frontend-url</code></p>
+                    <p>Or set these directly in your deployment environment (Render, etc.)</p>
+                </div>
+                <div class="step">
+                    <h3>3. Frontend Setup</h3>
+                    <p>Navigate to the frontend directory:</p>
+                    <p class="directory-path"><code>cd Employee-Management-System/frontend</code></p>
+                    <p>Install dependencies and start the development server:</p>
+                    <p class="import-command"><code>npm install<br>npm run dev</code></p>
+                </div>
+                <div class="step">
+                    <h3>4. Run the Application</h3>
+                    <p>Start the backend Spring Boot application from the backend directory:</p>
+                    <p class="import-command"><code>mvn spring-boot:run</code></p>
+                    <p>The frontend will be available at <code>http://localhost:5173</code></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="alternative" class="alternative-section">
+            <h2>Live Demo</h2>
+            <p>You can access the deployed version of the application:</p>
+            <div class="button-container">
+                <a class="download-link" href="https://ems-springboot-application-kvr10.netlify.app/" target="_blank"><b>View Live Application</b></a>
+            </div>
+            <p><strong>Note:</strong> The backend service on Render may take ~50 seconds to respond on first request due to cold start.</p>
+        </section>
+
+        <section id="contributing">
+            <h2>Contributing</h2>
+            <p>Contributions are welcome! Feel free to open issues and submit pull requests to improve the application.</p>
+        </section>
+        
+        <section id="about-me">
+            <h2>Know More About Me</h2>
+            <p>Learn more about me and my projects by visiting my main website:</p>
+            <a class="repo-link" href="https://kvr-10.github.io" target="_blank"><b>Visit My Website</b></a>
+            <img src="qr-code.png" alt="My Portfolio" class="about-me-img">
+        </section>
+    </div>
+    
+    <footer>
+        <p>Contact me at <a href="mailto:chamansinha9480@gmail.com">chamansinha9480@gmail.com</a></p>
+    </footer>
+</body>
+</html>
