@@ -26,11 +26,13 @@ A full-stack web application for managing employee data efficiently with Spring 
 - Bootstrap
 - Axios
 
-### DevOps
-- Docker
-- Render (Backend)
-- Railway (Database)
-- Netlify (Frontend)
+### DevOps & Deployment  
+- **CI/CD:** GitHub Actions  
+- **Containerization:** Docker  
+- **Hosting & Deployment:**  
+  - Render (Backend Hosting)  
+  - Railway (Database Hosting)  
+  - Netlify (Frontend Hosting)  
 
 ## Live Demo
 
