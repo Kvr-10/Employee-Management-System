@@ -81,44 +81,54 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
-                <i class="bi bi-people-fill me-2"></i>EMS
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#technologies">Technologies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#screenshots">Screenshots</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#installation">Installation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-outline-light" href="https://ems-springboot-application-kvr10.netlify.app/" target="_blank">Live Demo</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-<!-- Hero Section -->
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+            <i class="bi bi-people-fill me-2"></i>EMS
+        </a>
+        
+        <!-- Live Demo Button - Visible on all screens -->
+        <a class="btn btn-outline-light d-lg-none ms-auto me-2" href="https://ems-springboot-application-kvr10.netlify.app/" target="_blank">
+            Live Demo
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#technologies">Technologies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#screenshots">Screenshots</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#installation">Installation</a> <!-- Fixed typo -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <!-- Live Demo Button - Visible only on desktop -->
+                <li class="nav-item ms-lg-3 d-none d-lg-block">
+                    <a class="btn btn-outline-light" href="https://ems-springboot-application-kvr10.netlify.app/" target="_blank">Live Demo</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
 <section class="hero-section">
     <div class="container">
         <div class="row align-items-center">
+            <!-- Content Column - Always comes first in DOM -->
             <div class="col-lg-6">
                 <h1 class="display-4 fw-bold mb-4">Employee Management System</h1>
                 <p class="lead mb-4">A modern full-stack solution for efficient employee data management with real-time CRUD operations and responsive design.</p>
@@ -131,9 +141,13 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-6 d-none d-lg-block">
-                <div class="hero-image-container" id="parallax-image">
-                    <img src="screenshots/dashboard.jpg" alt="EMS Dashboard" class="img-fluid rounded shadow-lg">
+            
+            <!-- Video Column - Comes second in DOM but appears below on mobile -->
+            <div class="col-lg-6 mt-4 mt-lg-0">
+                <div class="demo-video ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/YQTeTHjM6jo" 
+                            allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                 </div>
             </div>
         </div>
@@ -144,74 +158,41 @@
     .hero-section {
         background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
         color: white;
-        padding: 6rem 0;
-        overflow: hidden;
+        padding: 4rem 0;
     }
-    
-    .hero-image-container {
-        position: relative;
-        padding: 15px;
-        background: rgba(255,255,255,0.1);
+
+    /* YouTube Video Styling */
+    .demo-video {
         border-radius: 16px;
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255,255,255,0.2);
-        transform-style: preserve-3d;
-        will-change: transform;
-        transition: transform 0.5s ease-out;
+        overflow: hidden;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        background: #000;
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
     
-    .hero-image-container img {
-        max-height: 500px;
-        width: auto;
-        object-fit: contain;
-        box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
-        transform-style: preserve-3d;
-        transition: transform 0.5s ease-out;
+    /* Desktop specific styles */
+    @media (min-width: 992px) {
+        .hero-section {
+            padding: 6rem 0;
+        }
+        
+        .demo-video {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .demo-video:hover {
+            transform: scale(1.02);
+            box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.3);
+        }
     }
-    
+
+    /* Large desktop enhancement */
     @media (min-width: 1400px) {
         .hero-section {
             padding: 8rem 0;
         }
-        
-        .hero-image-container img {
-            max-height: 550px;
-        }
     }
 </style>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const parallaxImage = document.getElementById('parallax-image');
-        const img = parallaxImage.querySelector('img');
-        
-        // Set initial rotation
-        let rotateX = -5;
-        let rotateY = 0;
-        
-        // Add event listener for mouse movement
-        document.addEventListener('mousemove', (e) => {
-            // Calculate mouse position relative to viewport
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            
-            // Calculate rotation values (limited to 10 degrees)
-            rotateX = (y * 10) - 5;  // -5 to 5 degrees
-            rotateY = (x * 10) - 5;  // -5 to 5 degrees
-            
-            // Apply the transformation
-            parallaxImage.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-            img.style.transform = `translateZ(20px)`;
-        });
-        
-        // Reset position when mouse leaves
-        parallaxImage.addEventListener('mouseleave', () => {
-            parallaxImage.style.transform = 'perspective(1000px) rotateX(-5deg) rotateY(0deg)';
-            img.style.transform = 'translateZ(0)';
-        });
-    });
-</script>
 
     <!-- Features Section -->
     <section id="features" class="py-5">
